@@ -5,6 +5,7 @@
     ./copyq.nix # cool clipboard manager
     ./flameshot.nix # superb screenshot tool
     ./lightdm.nix # you can use a different display manager/greeter if you want
+    ./posy-cursors.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -13,9 +14,6 @@
     # TODO: theme dmenu so it doesn't look like aah
     bemoji
     dmenu
-
-    # not free license
-    posy-cursors # comfy cursor set
   ];
 
   services.xserver = {
@@ -38,28 +36,20 @@
 
       echo "[CappaOS] Installing Cinnamon configuration"
 
-      HOME_DIR="$HOME"
-
       install -d \
-        "$HOME_DIR/.icons/default" \
-        "$HOME_DIR/.config/cinnamon/spices/calendar@cinnamon.org" \
-        "$HOME_DIR/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23"
-
-      # Posy cursor theme
-      cp -f \
-        /etc/nixos/cappaos/default-configs/index.theme \
-        "$HOME_DIR/.icons/default/index.theme"
+        "$HOME/.config/cinnamon/spices/calendar@cinnamon.org" \
+        "$HOME/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23"
 
       # Cinnamon applet configs
       cp -f \
         /etc/nixos/cappaos/default-configs/spices/calendar.json \
-        "$HOME_DIR/.config/cinnamon/spices/calendar@cinnamon.org/12.json"
+        "$HOME/.config/cinnamon/spices/calendar@cinnamon.org/12.json"
 
       cp -f \
         /etc/nixos/cappaos/default-configs/spices/multicore-sys-monitor.json \
-        "$HOME_DIR/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/multicore-sys-monitor@ccadeptic23.json"
+        "$HOME/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/multicore-sys-monitor@ccadeptic23.json"
 
-      soundCfg="$HOME_DIR/.config/cinnamon/spices/sound@cinnamon.org/sound@cinnamon.org.json"
+      soundCfg="$HOME/.config/cinnamon/spices/sound@cinnamon.org/sound@cinnamon.org.json"
 
       if [ -f "$soundCfg" ]; then
         current="$(${pkgs.jq}/bin/jq -r '.keyOpen.value' "$soundCfg")"
