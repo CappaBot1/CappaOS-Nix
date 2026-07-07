@@ -4,7 +4,6 @@
   imports = [
     ./copyq.nix # cool clipboard manager
     ./flameshot.nix # superb screenshot tool
-    ./lightdm.nix # you can use a different display manager/greeter if you want
     ./posy-cursors.nix
   ];
 
