@@ -1,20 +1,12 @@
 { pkgs, modulesPath, lib, ... }:
 
-# to build this run the following command:
-# NIXOS_CONFIG="/etc/nixos/cappaos/iso.nix" nixos-rebuild build-image --image-variant iso
-
 {
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-graphical-calamares.nix"
-
-    ./cinnamon.nix
-    ./lightdm.nix
-
-    ./base.nix
   ];
 
   # copy over cappaos files
-  environment.etc."nixos/cappaos".source = ../cappaos;
+  #environment.etc."nixos/cappaos".source = ../cappaos;
 
   # make iso build faster
   isoImage.squashfsCompression = "gzip -Xcompression-level 1";

@@ -33,5 +33,19 @@
           })
           modules
       );
+    
+    nixConfigurations = {
+      iso = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./iso.nix
+
+          ./cinnamon.nix
+          ./lightdm.nix
+
+          ./base.nix
+        ];
+      };
+    };
   };
 }
