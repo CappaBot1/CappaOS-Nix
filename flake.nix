@@ -27,10 +27,10 @@
     nixosModules = builtins.listToAttrs
       (
         map
-          name: {
+          (name: {
             inherit name;
             value = import ./${name}.nix;
-          }
+          })
           modules
       );
   };
