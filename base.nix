@@ -14,14 +14,11 @@
     fastfetch
     speedtest-cli
 
+    # python bad
     #python3
 
     hollywood
     taskwarrior3
-
-    # graphical
-    syncthing
-    firefox
   ];
 }
 

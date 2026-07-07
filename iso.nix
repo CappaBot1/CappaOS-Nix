@@ -7,8 +7,10 @@
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-graphical-calamares.nix"
 
-    # get cappaos in there
-    ./cappaos.nix
+    ./cinnamon.nix
+    ./lightdm.nix
+
+    ./base.nix
   ];
 
   # copy over cappaos files
