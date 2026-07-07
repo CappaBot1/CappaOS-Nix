@@ -20,7 +20,7 @@
       "inside-virtual-machine"
       "lightdm"
       "ly"
-      "posy-cursor"
+      "posy-cursors"
       "virtualization"
     ];
   in {
