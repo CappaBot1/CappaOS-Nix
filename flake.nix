@@ -9,7 +9,7 @@
   let
     modules = [
       "base"
-      "cappaos"
+      "base-graphical"
       "cinnamon"
       "copyq"
       "creator"
