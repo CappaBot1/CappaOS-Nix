@@ -14,7 +14,12 @@
     };
   };
 
+  services.dunst = {
+    enable = true; # dunst notifications
+  };
+
   environment.systemPackages = with pkgs; [
+    dex # autostart things like copyq and flameshot
     kitty
   ];
 }
