@@ -30,8 +30,8 @@
       Type = "oneshot";
     };
 
-    environment.etc."cappaos-defaults/spices/calendar.json".source = "./default-configs/spices/calendar.json";
-    environment.etc."cappaos-defaults/spices/multicore-sys-monitor.json".source = "./default-configs/spices/multicore-sys-monitor.json";
+    environment.etc."cappaos-defaults/spices/calendar.json".source = ./default-configs/spices/calendar.json;
+    environment.etc."cappaos-defaults/spices/multicore-sys-monitor.json".source = ./default-configs/spices/multicore-sys-monitor.json;
 
     script = ''
       set -euo pipefail
