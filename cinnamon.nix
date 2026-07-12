@@ -20,6 +20,9 @@
     desktopManager.cinnamon.enable = true;
   };
 
+  environment.etc."cappaos-defaults/spices/calendar.json".source = ./default-configs/spices/calendar.json;
+  environment.etc."cappaos-defaults/spices/multicore-sys-monitor.json".source = ./default-configs/spices/multicore-sys-monitor.json;
+
   systemd.user.services.cappaos-cinnamon-theme-init = {
     description = "Install CappaOS Cinnamon configuration";
 
@@ -29,9 +32,6 @@
     serviceConfig = {
       Type = "oneshot";
     };
-
-    environment.etc."cappaos-defaults/spices/calendar.json".source = ./default-configs/spices/calendar.json;
-    environment.etc."cappaos-defaults/spices/multicore-sys-monitor.json".source = ./default-configs/spices/multicore-sys-monitor.json;
 
     script = ''
       set -euo pipefail
