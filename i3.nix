@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./copyq.nix # cool clipboard manager
+    ./flameshot.nix # superb screenshot tool
     ./posy-cursors.nix
   ];
 
