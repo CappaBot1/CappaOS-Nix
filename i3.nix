@@ -18,14 +18,14 @@
     enable = true; # dunst notifications
   };
 
-  xdg.portal = {
-    enable = true; # enable this for flameshot
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+  #xdg.portal = {
+  #  enable = true; # enable this for flameshot
+  #  #extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  #};
 
   environment.systemPackages = with pkgs; [
     dex # autostart things like copyq and flameshot
-    #xdg-desktop-portal # make flameshot work #probably doesn't work?
+    xdg-desktop-portal # make flameshot work #probably doesn't work?
     kitty
   ];
 }
