@@ -30,6 +30,9 @@
       Type = "oneshot";
     };
 
+    environment.etc."cappaos-defaults/spices/calendar.json".source = "./default-configs/spices/calendar.json";
+    environment.etc."cappaos-defaults/spices/multicore-sys-monitor.json".source = "./default-configs/spices/multicore-sys-monitor.json";
+
     script = ''
       set -euo pipefail
 
@@ -41,11 +44,11 @@
 
       # Cinnamon applet configs
       cp -f \
-        /etc/nixos/cappaos/default-configs/spices/calendar.json \
+        /etc/cappaos-defaults/spices/calendar.json \
         "$HOME/.config/cinnamon/spices/calendar@cinnamon.org/12.json"
 
       cp -f \
-        /etc/nixos/cappaos/default-configs/spices/multicore-sys-monitor.json \
+        /etc/cappaos-defaults/spices/multicore-sys-monitor.json \
         "$HOME/.config/cinnamon/spices/multicore-sys-monitor@ccadeptic23/multicore-sys-monitor@ccadeptic23.json"
 
       soundCfg="$HOME/.config/cinnamon/spices/sound@cinnamon.org/sound@cinnamon.org.json"
