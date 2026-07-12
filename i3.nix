@@ -20,7 +20,7 @@
 
   xdg.portal = {
     enable = true; # enable this for flameshot
-    #extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     config = {
       common.default = [ "gtk" ];
     };
