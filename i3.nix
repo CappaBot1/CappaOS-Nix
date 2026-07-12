@@ -18,6 +18,7 @@
     enable = true; # dunst notifications
   };
 
+  # TODO: fix flameshot and this ig
   xdg.portal = {
     enable = true; # enable this for flameshot
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -28,6 +29,7 @@
 
   environment.systemPackages = with pkgs; [
     dex # autostart things like copyq and flameshot
+    nm-applet
     kitty
   ];
 }
