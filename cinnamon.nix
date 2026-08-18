@@ -101,6 +101,10 @@
           #startup-animation = false;
         };
 
+        "/org/x/apps/portal" = {
+          color-scheme = "prefer-dark"
+        }
+        
         "org/cinnamon/desktop/interface" = {
           cursor-blink-time = lib.gvariant.mkInt32 1200;
 
@@ -169,9 +173,10 @@
 
         "org/cinnamon/desktop/keybindings/media-keys" = {
           screenshot = [ "" ];
+          area-screenshot = [ "" ];
           terminal = [
             "<Primary><Alt>t"
-            "<Super>z"
+            "<Super>Return"
           ];
         };
 
