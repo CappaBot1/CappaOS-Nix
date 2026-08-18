@@ -101,7 +101,7 @@
           #startup-animation = false;
         };
 
-        "/org/x/apps/portal" = {
+        "org/x/apps/portal" = {
           color-scheme = "prefer-dark";
         };
         
