@@ -103,7 +103,7 @@
 
         "/org/x/apps/portal" = {
           color-scheme = "prefer-dark";
-        }
+        };
         
         "org/cinnamon/desktop/interface" = {
           cursor-blink-time = lib.gvariant.mkInt32 1200;
