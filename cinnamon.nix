@@ -102,7 +102,7 @@
         };
 
         "/org/x/apps/portal" = {
-          color-scheme = "prefer-dark"
+          color-scheme = "prefer-dark";
         }
         
         "org/cinnamon/desktop/interface" = {
