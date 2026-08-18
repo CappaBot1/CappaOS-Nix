@@ -10,6 +10,7 @@
     modules = [
       "base"
       "base-graphical"
+      "chrome"
       "cinnamon"
       "copyq"
       "creator"
@@ -20,7 +21,9 @@
       "inside-virtual-machine"
       "lightdm"
       "ly"
+      "openvpn"
       "posy-cursors"
+      "school"
       "virtualization"
     ];
   in {
@@ -44,6 +47,7 @@
           ./lightdm.nix
 
           ./base.nix
+          ./base-graphical.nix
         ];
       };
     };
