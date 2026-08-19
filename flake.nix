@@ -15,6 +15,7 @@
       "copyq"
       "creator"
       "development"
+      "flake-support"
       "flameshot"
       "gaming"
       "i3"
