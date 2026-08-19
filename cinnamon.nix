@@ -190,6 +190,13 @@
           switch-enabled = false;
           tile-enabled = false;
         };
+
+        "org/cinnamon/gestures" = {
+          enabled = true;
+          swipe-left-3 = "WORKSPACE_NEXT::::start";
+          swipe-right-3 = "WORKSPACE_PREVIOUS::::start";
+          swipe-percent-threshold = lib.gvariant.mkInt32 20;
+        };
       };
     }
   ];
