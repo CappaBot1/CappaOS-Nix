@@ -16,8 +16,7 @@
 
     # python bad
     #python3
-
-    hollywood
+    
     taskwarrior3
   ];
 }
